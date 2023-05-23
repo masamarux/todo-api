@@ -12,8 +12,6 @@ export const routes = [
     handler: (req, res) => {
       const { search } = req.query
 
-      console.log(search)
-
       const tasks = database.select('tasks', search ? {
         title: search,
         description: search
